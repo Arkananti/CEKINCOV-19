@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>CEKINCOV-19</title>
+    <meta content="CEKINCOV-19" name="CEK INFORMASI COVID-19" />
+    <meta content="CEKINCOV-19" name="Provinsi" />
+    <meta author="https://hardianto.netlify.app/" name="HARDIANTO" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet" />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/style.min.css" />
+  </head>
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-transparent">
+      <div class="container d-flex align-items-center">
+        <div class="logo mr-auto">
+          <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">Tentang Covid</a></li>
+            <li><a href="#details">Gejala Covid</a></li>
+            <li><a href="#pencegahan">Pencegahan Covid</a></li>
+            <li class="active"><a href="provinsi.html">Data Provinsi Indonesia</a></li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+            <div>
+              <h1>[CEKINCOV-19] CEK INFORMASI COVID-19</h1>
+              <h2>Informasi Kasus COVID-19 dan Data Statistik di Provinsi Indonesia.</h2>
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+            <img src="assets/img/hero-img.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+              <h5 class="fw-bold">Jumlah Kasus COVID-19 Indonesia Hari Ini</h5>
+              <div id="terakhir-update"></div>
+          </div>
+      </div>
+      <div class="row mt-3">
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card terkonfirmasi">
+                  <div class="card-body">
+                      <div class="card-title">
+                          <h7 class="text-uppercase"><i class="fas fa-plus"></i>Total Terkonfirmasi</h7>
+                      </div>
+                      <div class="text-center angka-kasus" id="konfirmasi"></div>
+                      <div class="d-flex justify-content-end">
+                          <i class="bi-arrow-up-circle"></i><span class="mx-2" id="harian-konfirmasi"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card kasus-aktif">
+                  <div class="card-body">
+                      <div class="card-title">
+                          <h7 class="text-uppercase"><i class="fas fa-hospital"></i>Kasus Aktif</h7>
+                      </div>
+                      <div class="text-center angka-kasus" id="dirawat"></div>
+                      <div class="d-flex justify-content-end">
+                          <span class="bi-arrow-up-circle"></i><span class="mx-2" class="mx-2" id="harian-dirawat"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card sembuh">
+                  <div class="card-body">
+                      <div class="card-title">
+                          <h8 class="text-uppercase"><i class="far fa-smile"></i>Sembuh</h8>
+                      </div>
+                      <div class="text-center angka-kasus" id="sembuh"></div>
+                      <div class="d-flex justify-content-end">
+                          <i class="bi-arrow-up-circle"></i><span class="mx-2" id="harian-sembuh"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+              <div class="card meninggal">
+                  <div class="card-body">
+                      <div class="card-title">
+                          <h9 class="text-uppercase"><i class="far fa-frown"></i>Meninggal Dunia</h9>
+                      </div>
+                      <div class="text-center angka-kasus" id="meninggal-dunia"></div>
+                      <div class="d-flex justify-content-end">
+                          <i class="bi-arrow-up-circle"></i><span class="mx-2" id="harian-meninggal-dunia"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div><!-- End .content-->
+    </div>
+  </section>
+<!-- End Hero -->
+
+    <main id="main">
+
+      
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="section-title">
+          </div>
+          <div class="row content">
+            <div class="col-md-4" data-aos="fade-right">
+              <img src="assets/img/about.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8 pt-4" data-aos="fade-up">
+              <h3>Apakah Coronavirus dan COVID-19 itu?</h3>
+              <p>Coronavirus merupakan keluarga besar virus yang menyebabkan penyakit pada manusia dan hewan. Pada manusia biasanya menyebabkan penyakit infeksi saluran pernapasan, mulai flu biasa hingga penyakit yang serius seperti Middle East Respiratory Syndrome (MERS) dan Sindrom Pernafasan Akut Berat/ Severe Acute Respiratory Syndrome (SARS). Coronavirus jenis baru yang ditemukan pada manusia sejak kejadian luar biasa muncul di Wuhan Cina, pada Desember 2019, kemudian diberi nama Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-COV2), dan menyebabkan penyakit Coronavirus Disease-2019 (COVID-19).</p>
+              <h3>Penamaan Varian SARS-CoV-2</h3>
+              <p>Sistem tata nama yang ditetapkan untuk penamaan dan pelacakan garis keturunan genetik SARS-CoV-2 oleh GISAID , Nextstrain dan Pango saat ini dan akan tetap digunakan oleh para ilmuwan dan dalam penelitian ilmiah. Untuk membantu diskusi publik tentang varian, WHO mengumpulkan sekelompok ilmuwan dari Kelompok Kerja Evolusi Virus WHO (sekarang disebut Kelompok Penasihat Teknis tentang Evolusi Virus), jaringan laboratorium rujukan COVID-19 WHO, perwakilan dari GISAID, Nextstrain, Pango dan pakar tambahan dalam virologi, nomenklatur mikroba dan komunikasi dari beberapa negara dan lembaga untuk mempertimbangkan label yang mudah diucapkan dan tidak menimbulkan stigma untuk VOI dan VOC. Saat ini, kelompok ahli yang dibentuk oleh WHO ini telah merekomendasikan penggunaan huruf Alfabet Yunani, yaitu Alpha, Beta, Gamma , Delta yang akan lebih mudah dan praktis untuk dibahas oleh audiens non-ilmiah.</p>
+              <div class=>Sumber: <a href="https://covid19.go.id/tentang-covid-19">covid-19.go.id</a>
+            </div>
+          </div>
+        </section>
+        <!-- End About Section -->
+
+      <!-- ======= Details Section ======= -->
+      <section id="details" class="details">
+        <div class="container">
+          <div class="row content">
+            <div class="col-md-4" data-aos="fade-right">
+              <img src="assets/img/gejala.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8 pt-4" data-aos="fade-up">
+              <h3>Gejala Covid</h3>
+              <p>COVID-19 mempengaruhi orang yang berbeda dengan cara yang berbeda. Kebanyakan orang yang terinfeksi akan mengembangkan penyakit ringan sampai sedang dan sembuh tanpa rawat inap.</p>
+              <ul>
+              <h5>Gejala yang paling umum:</h5>
+              <p>1. Demam</p>
+              <p>2. Batuk</p>
+              <p>3. Kelelahan</p>
+              <p>4. Hilangnya rasa atau bau.</p>
+              <h5>Gejala yang kurang umum:</h5>
+              <p>1. Sakit Tenggorokan</p>
+              <p>2. Sakit Kepala</p>
+              <p>3. Sakit dan Nyeri</p>
+              <p>4. Diare</p>
+              <p>5. Ruam pada kulit, atau Perubahan warna jari tangan atau kaki
+                mata merah atau iritasi.</p>
+              <h4>Gejala serius:</h4>
+              <p>1. Kesulitan bernapas atau Sesak napas</p>
+              <p>2. Kehilangan bicara atau Mobilitas, atau Kebingungan</p>
+              <p>3. Sakit Dada.</p>
+              <h7>Cari pertolongan medis segera jika Anda memiliki gejala yang serius. Selalu hubungi sebelum mengunjungi dokter atau fasilitas kesehatan Anda. </h7>
+              </ul>
+              <h7>Orang dengan gejala ringan yang dinyatakan sehat harus mengelola gejala mereka di rumah.</h7>
+              </ul>
+              <h7>Rata-rata dibutuhkan 5-6 hari sejak seseorang terinfeksi virus untuk menunjukkan gejala, namun bisa memakan waktu hingga 14 hari.</h7>
+            </div>
+          </div>
+          <!-- End Details Section -->
+
+          <!-- ======= Pecegahan Section ======= -->
+          <section id="pencegahan" class="pencegahan">
+          <div class="container">
+          <div class="row content">
+            <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+              <img src="assets/img/melindungi.png" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+              <h3>Cara Melindungi Diri Terhadap Virus Corona (COVID-19)</h3>
+              <p>Sampai saat ini, belum ada obat khusus yang disarankan untuk mencegah atau mengobati penyakit yang disebabkan virus corona baru (COVID-19). Penyebaran virus dapat berpindah secara langsung melalui percikan batuk dan napas orang terinfeksi yang kemudian terhirup orang sehat. Virus juga dapat menyebar secara tidak langsung melalui benda-benda yang tercemar virus akibat percikan atau sentuhan tangan yang tercemar virus. Virus bisa tertinggal di permukaan benda-benda dan hidup selama beberapa jam hingga beberapa hari, namun cairan disinfektan dapat membunuhnya.</p>
+              <p>Sementara ini, cara terbaik adalah melakukan tindakan pencegahan, yaitu:</p>
+              <ul>
+              <h6>1. Dapatkan vaksinasi ketika vaksin tersedia untuk Anda.</h6>
+              <h6>2. Jaga jarak setidaknya 1 meter dari yang lain, bahkan jika mereka tidak tampak sakit.</h6>
+              <h6>3. Kenakan masker yang dipasang dengan benar ketika jarak fisik tidak memungkinkan.</h6>
+              <h6>4. Pilih ruang terbuka dan berventilasi baik daripada yang tertutup.</h6>
+              <h6>5. Cuci tangan Anda secara teratur dengan sabun / hands sanitizer dengan air.</h6>
+              <h6>6. Tutup mulut dan hidung saat batuk atau bersin.</h6>
+              <h6>7. Jika Anda merasa tidak sehat, tetap di rumah dan isolasi diri sampai Anda pulih.</h6>
+              </ul>
+            </div>
+          </div>
+          <div class=>Sumber: <a href="Sumber : https://www.who.int/health-topics/coronavirus#tab=tab_1"data-aos="fade-left">https://www.who.int/</a>
+        </section>
+        <!-- End Pencegahan Section -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="footer mt-auto py-2">
+            <div class="copyright">
+            &copy; Copyright <strong>CEKINCOV-19</strong>. All Rights Reserved.
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+        <div class="footer mt-auto py-1">
+        <div class="credits">
+          Project by. <a href="https://hardianto.netlify.app/">HARDIANTO</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/vendor/venobox/venobox.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.13.4/jquery.mask.min.js"></script>
+    <script src="dist/momentjs/moment-with-locales.min.js"></script>
+    <script src="src/js/index.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
