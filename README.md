@@ -2,7 +2,7 @@ CEKINCOV-19 | CEK INFORMASI COVID-19
 
 Informasi Kasus COVID-19 dan Data Provinsi di Seluruh Indonesia.
 
-[Klik Disini](https://cekincov-19.netlify.app) untuk melihat Website
+[Klik Disini](https://cekincov-19.vercel.app/) untuk melihat Website
 
 ### Framework
  - [Bootstrap 5]
